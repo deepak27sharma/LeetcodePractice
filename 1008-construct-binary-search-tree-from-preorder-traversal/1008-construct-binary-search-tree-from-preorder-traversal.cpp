@@ -11,16 +11,15 @@
  */
 class Solution {
     /*int firstLargerIndex(vector<int>& preorder, int l, int h, int value) {
-        int larger = INT_MAX;
+        int m = -1;
         while (l <= h) {
             if (l == h) {
                 if (preorder[l] > value) return l;
-                return larger;
+                return -1;
             }
-            int m = l + (h - l) / 2;
+            m = l + (h - l) / 2;
             if (preorder[m] > value) {
                 h = m;
-                larger = min(m, larger);
             } else {
                 l = m + 1;
             }
